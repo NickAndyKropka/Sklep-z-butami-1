@@ -2,13 +2,22 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    background-color: darkslateblue;
 }
-.koszyk {
-    height: 150px;
-    width: 150px;
+a:link {
+    text-decoration: none;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+a:visited {
+    text-decoration: none;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
 }
 .formularz {
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
 }
