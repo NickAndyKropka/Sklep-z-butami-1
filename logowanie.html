@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logowanie na stronie</title>
+    <link rel="stylesheet" href="logowanie.css">
 </head>
 <body>
     <!-- Nagłówek -->
-    <header>
+    <header class="naglowek">
         <a href="index.html"><img src="images/logo.png" alt="logo strony"></a>
         <h1>Buty.pl</h1>
         <a href="logowanie.html"><p>Logowanie</p></a>
@@ -15,9 +16,9 @@
         <a href="koszyk.html"><img class="koszyk" src="images/koszyk.png" alt="koszyk"></a>
     </header>
     <!-- Formularz logowania -->
-    <div>
+    <div class="formularz">
         <form action="logowanie.php" method="post">
-            <h1>Podaj nazwę użytkownika</h1>
+            <h1>Podaj nazwę użytkownika:</h1>
             <input type="text" name="nazwa"><br>
             <h1>Podaj hasło:</h1>
             <input type="text" name="pass"><br>
