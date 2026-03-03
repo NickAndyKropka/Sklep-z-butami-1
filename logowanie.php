@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
@@ -21,6 +20,14 @@
             <input type="text" name="nazwa"><br>
             <h1>Podaj hasło:</h1>
             <input type="text" name="pass"><br>
+            <?php
+                if (TRUE)
+                {
+                    fopen("index.html","r+");
+                }
+                else
+                    echo"Błędne dane logowania";
+            ?>
             <input type="submit" name="log" value="Zaloguj się">
         </form>
     </div>
