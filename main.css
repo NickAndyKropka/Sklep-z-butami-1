@@ -1,0 +1,8 @@
+header {
+    display: flex;
+    flex-direction: row;
+}
+.koszyk {
+    height: 150px;
+    width: 150px;
+}
