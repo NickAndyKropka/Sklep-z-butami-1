@@ -2,3 +2,7 @@ header {
     display: flex;
     flex-direction: row;
 }
+.grid-container {
+    display: flex;
+    flex-direction: row;
+}
