@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
@@ -35,6 +34,14 @@
             <input type="text" name="pass"><br>
             <h3>Potwierdź hasło:</h3>
             <input type="text" name="potpass"><br>
+            <?php 
+                if(TRUE) {
+                    fopen("logowanie.html","r+");
+                }
+                else {
+                    echo"Konto z takimi danymi już istnieje, spróbuj ponownie";
+                }
+            ?>
             <input class="guzik" type="submit" value="Zarejestruj się">
         </form>
     </div>
