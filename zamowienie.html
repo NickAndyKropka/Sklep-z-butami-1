@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zamówienie</title>
+    <link rel="stylesheet" href="zamowienie.css">
+    <script src="zamowienie.js"></script>
+</head>
+<body>
+    <!-- Nagłówek -->
+    <header class="naglowek">
+        <a class="lewo" href="index.html"><img src="images/logo.png" alt="logo strony"></a>
+        <h1 class="tytul">Buty.pl</h1>
+        <div class="prawo">
+            <a href="logowanie.html">Logowanie</a>
+            <a href="rejestracja.html">Rejestracja</a>
+            <a href="koszyk.html"><img class="koszyk" src="images/koszyk.png" alt="koszyk"></a>
+        </div>
+    </header>
+    <form action="potwierdzenie.php">
+        <p>METODA I ADRES DOSTAWY</p>
+        <h1>Wybierz metodę dostawy:</h1>
+        <input id="ip" type="radio" name="kurier" value="ip">
+        <label for="ip">Kurier InPost</label><br>
+        <input id="dhl" type="radio" name="kurier" value="dhl">
+        <label for="dhl">Kurier DHL</label><br>
+        <input id="dpd" type="radio" name="kurier" value="dpd">
+        <label for="dpd">Kurier DPD</label><br>
+        <h1>Adres dostawy:</h1>
+        <h2>Miejscowość:</h2>
+        <input type="text" name="miejscowosc" required><br>
+        <h2>Ulica:</h2>
+        <input type="text" name="ulica" required><br>
+        <h2>Numer lokalu:</h2>
+        <input type="text" name="lokal" required><br>
+        <p>METODA PŁATNOŚCI</p>
+        <label for="karta">Płatność kartą</label>
+        <input id="karta" type="radio" name="platnosc" value="karta">
+        <label for="blik">Płatność BLIK</label>
+        <input id="blik" type="radio" name="platnosc" value="blik">
+        <label for="pobranie">Płatność za pobraniem</label>
+        <input id="pobranie" type="radio" name="platnosc" value="pobranie">
+    </form>
+</body>
+</html>
