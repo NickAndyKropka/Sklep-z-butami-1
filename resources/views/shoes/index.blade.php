@@ -64,7 +64,43 @@
         <!-- Buty -->
         <div class="widok">
                 <ul class="lista">
+                    @foreach($shoes as $shoe)
                     <li>
+                        <div class="product-card">
+                            @if($shoe->image)
+                                <img src="{{ asset('storage/' . $shoe->image) }}" alt="{{ $shoe->name }}">
+                            @else
+                                <div class="no-image">Brak zdjęcia</div>
+                            @endif
+
+                            <div class="product-body">
+                                <h4>{{ $shoe->name }}</h4>
+                                <div class="product-brand">{{ $shoe->brand }}</div>
+                                <div class="product-price">
+                                    {{ number_format($shoe->price, 2, ',', ' ') }} zł
+                                </div>
+                                <div class="product-meta">{{ $shoe->category }}</div>
+                                <div class="product-meta">{{ $shoe->type }}</div>
+
+                                <div style="margin-top: 14px;">
+                                    <a href="{{ route('shoes.show', $shoe) }}" class="btn-main">
+                                        Zobacz produkt
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                @endforeach
+                </ul>
+        </div>
+        <img src="images/sunflower.png" style="opacity: 6.7%; width: 100%; height: 40px;" onclick="window.open('https://i.imgflip.com/6m7i18.png?a492312')">
+    @endsection
+
+</body>
+</html>
+
+
+<!-- <li>
                         <div>
                             <div>
                                 <img src="images/Carina2.0_01.jpg" alt="but">
@@ -273,11 +309,4 @@
                                 <h3>Codzienne</h3>
                             </div>
                         </div>
-                    </li>
-                </ul>
-        </div>
-        <img src="images/sunflower.png" style="opacity: 6.7%; width: 100%; height: 40px;" onclick="window.open('https://i.imgflip.com/6m7i18.png?a492312')">
-    @endsection
-
-</body>
-</html>
+                    </li> -->
