@@ -52,6 +52,7 @@
         </details>
         <!-- Buty -->
         <div class="widok">
+            @if($shoes->count())
                 <ul class="lista">
                     @foreach($shoes as $shoe)
                         <li>
@@ -63,7 +64,7 @@
                                         <div class="no-image">Brak zdjęcia</div>
                                     @endif
 
-                                    <div class="produkt">
+                                    <div class="product-body">
                                         <h4 class="nazwa">{{ $shoe->name }}</h4>
                                         <div class="product-brand">{{ $shoe->brand }}</div>
                                         <div class="product-price">
@@ -86,13 +87,13 @@
                     Brak produktów spełniających wybrane kryteria.
                 </div>
             @endif
-        </section>
-    </div>
 
-    <div class="pagination-wrap">
-        {{ $shoes->links() }}
+        </div>
+
+        <div class="pagination-wrap">
+            {{ $shoes->links() }}
+        </div>
     </div>
-</div>
 @endsection
 
 
