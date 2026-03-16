@@ -32,6 +32,7 @@
         <div class="szukaj">
             <input type="text" class="szukaj_input" id="filtr" placeholder="Wyszukaj swoich wymarzonych butów">
         </div>
+        <!-- Filtrowanie -->
         <details class="details">
             <h3>Wybierz markę</h3>
             <select id="marka">
