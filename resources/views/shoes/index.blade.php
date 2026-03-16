@@ -1,70 +1,57 @@
     @extends('layouts.app')
 
-@section('content')
-<div class="container-shop">
-
-    <div class="szukaj">
-        <form method="GET" action="{{ route('shoes.index') }}">
-            <input
-                type="text"
-                name="q"
-                class="szukaj_input"
-                placeholder="Wyszukaj swoich wymarzonych butów"
-                value="{{ request('q') }}"
-            >
-
-            <input type="hidden" name="brand" value="{{ request('brand') }}">
-            <input type="hidden" name="category" value="{{ request('category') }}">
-            <input type="hidden" name="type" value="{{ request('type') }}">
-        </form>
-    </div>
-
-    <div class="layout-shop">
-        <aside class="filters">
-            <h3>Filtry</h3>
-
-            <form method="GET" action="{{ route('shoes.index') }}">
-                <input type="hidden" name="q" value="{{ request('q') }}">
-
-                <label for="brand">Wybierz markę</label>
-                <select name="brand" id="brand">
-                    <option value="">Wszystkie</option>
-                    @foreach($brands as $brand)
-                        <option value="{{ $brand }}" @selected(request('brand') == $brand)>
-                            {{ $brand }}
-                        </option>
-                    @endforeach
-                </select>
-
-                <label for="category">Wybierz kategorię</label>
-                <select name="category" id="category">
-                    <option value="">Wszystkie</option>
-                    @foreach($categories as $category)
-                        <option value="{{ $category }}" @selected(request('category') == $category)>
-                            {{ $category }}
-                        </option>
-                    @endforeach
-                </select>
-
-                <label for="type">Wybierz rodzaj</label>
-                <select name="type" id="type">
-                    <option value="">Wszystkie</option>
-                    @foreach($types as $type)
-                        <option value="{{ $type }}" @selected(request('type') == $type)>
-                            {{ $type }}
-                        </option>
-                    @endforeach
-                </select>
-
-                <div class="buttons">
-                    <button type="submit" class="btn-main">Filtruj</button>
-                    <a href="{{ route('shoes.index') }}" class="btn-soft">Wyczyść</a>
-                </div>
-            </form>
-        </aside>
-
-        <section class="widok">
-            @if($shoes->count())
+    @section('content')
+    
+    <!-- Nagłówek -->
+        <header class="gora">
+            <div class="logo">
+                <a class="lewo" href="index.html"><img src="Images/logo.png" alt="logo strony"></a>
+            </div>
+            <h1 class="tytul">Buty.pl</h1>
+            <div class="prawo">
+                <button class="rejestracja"><a href="rejestracja.html">Zarejestruj się</a></button>
+                <button class="login"><a href="logowanie.html">Zaloguj się</a></button>
+                <a href="koszyk.html"><img class="koszyk" src="Images/koszyk.png" alt="koszyk"></a>
+                <a href="uzytkownik.html"><img class="user" src="Images/user.png" alt="ikona użytkownika"></a>
+            </div>
+        </header>
+        <!-- Szukanie po nazwie -->
+        <div class="szukaj">
+            <input type="text" class="szukaj_input" id="filtr" placeholder="Wyszukaj swoich wymarzonych butów">
+        </div>
+        <details class="details">
+            <h3>Wybierz markę</h3>
+            <select id="marka">
+                <option value="">Wszystkie</option>
+                @foreach($brands as $brand)
+                    <option value="{{ $brand }}" @selected(request('brand') == $brand)>
+                        {{ $brand }}
+                    </option>
+                @endforeach
+            </select>
+            <h3>Wybierz kategorię</h3>
+            <select id="kat">
+                <option value="">Wszystkie</option>
+                @foreach($categories as $category)
+                    <option value="{{ $category }}" @selected(request('category') == $category)>
+                        {{ $category }}
+                    </option>
+                @endforeach
+            </select>
+            <h3>Wybierz Rodzaj</h3>
+            <select id="rodz">
+                <option value="">Wszystkie</option>
+                @foreach($types as $type)
+                    <option value="{{ $type }}" @selected(request('type') == $type)>
+                        {{ $type }}
+                    </option>
+                @endforeach
+            </select>
+            <input type="text" id="min" placeholder="Min cena">
+            <input type="text" id="max" placeholder="Max cena">
+        </details>
+        <!-- Buty -->
+        <div class="widok">
                 <ul class="lista">
                     @foreach($shoes as $shoe)
                         <li>
