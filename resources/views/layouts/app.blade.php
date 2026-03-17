@@ -12,7 +12,8 @@
 <body>
     <header class="topbar py-3">
         <div class="container d-flex justify-content-between align-items-center">
-            <a href="{{ route('shoes.index') }}" class="brand-logo">Sklep z butami</a>
+        <a href="{{ route('shoes.index') }}" class="brand-logo"><img src="{{ asset('storage/shoes/logo.png') }}" alt="Logo sklepu" class="img-fluid"></a>
+        <a href="{{ route('shoes.index') }}" class="brand-logo">Sklep z butami</a>
 
             <div class="d-flex gap-2 align-items-center">
                 <a class="btn btn-soft btn-sm" href="{{ route('cart.index') }}">Koszyk</a>
