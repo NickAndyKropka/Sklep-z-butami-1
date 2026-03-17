@@ -59,23 +59,15 @@ document.addEventListener("DOMContentLoaded", function () {
         // Funkcja do filtrowania po cenie
 
         function pocenie() {
-            const minValue = parseFloat(min.value);
-            const maxValue = parseFloat(max.value);
-            lista.forEach(item => {
-                const price = nowacena[Array.from(lista).indexOf(item)];
-                if (!isNaN(minValue) && !isNaN(maxValue)) {
-                    if (price >= minValue && price <= maxValue) {
-                        item.classList.remove('hidden');
-                    } else {
-                        item.classList.add('hidden');
-                    }
-                }
-                else
-                {
-                    item.classList.remove('hidden');
-                }
+            const minValue = min.value.trim() === '' ? null : parseFloat(min.value);
+            const maxValue = max.value.trim() === '' ? null : parseFloat(max.value);
+            lista.forEach((item, index) => {
+                const price = parseFloat(nowacena[index]);
+                let show = true;
+                if (minValue !== null && price < minValue) show = false;
+                if (maxValue !== null && price > maxValue) show = false;
+                item.classList.toggle('hidden', !show);
             });
-
         }
 
         //Wywoływanie funkcji filtrowania
