@@ -11,8 +11,7 @@
         >
     </div>
 
-    <details class="details">
-        <summary>Filtry</summary>
+    <aside class="details">
 
         <h3>Wybierz markę</h3>
         <select id="marka">
@@ -41,7 +40,7 @@
         <h3>Cena</h3>
         <input type="text" id="min" placeholder="Min cena">
         <input type="text" id="max" placeholder="Max cena">
-    </details>
+    </aside>
 
     <div class="widok">
         @if($shoes->count())
