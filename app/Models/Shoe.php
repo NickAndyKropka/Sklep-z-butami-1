@@ -17,4 +17,11 @@ class Shoe extends Model
         'description',
         'image',
     ];
+
+    public function reviews()
+    {
+        return $this->hasMany(Review::class);
+    }
 }
+
+
