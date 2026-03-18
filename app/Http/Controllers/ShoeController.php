@@ -37,6 +37,8 @@ class ShoeController extends Controller
 
     public function show(Shoe $shoe)
     {
+        $shoe->load(['reviews.user']);
+
         return view('shoes.show', compact('shoe'));
     }
 

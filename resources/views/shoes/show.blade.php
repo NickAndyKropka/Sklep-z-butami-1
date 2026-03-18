@@ -72,4 +72,51 @@
     </div>
 </div>
 
+<div class="row">
+    <div class="col-md-8">
+        <h3 class="mb-4">Opinie o produkcie</h3>
+
+        @auth
+            <form action="{{ route('reviews.store', $shoe) }}" method="POST" class="mb-5">
+                @csrf
+
+                <div class="mb-3">
+                    <label for="rating" class="form-label">Ocena</label>
+                    <select name="rating" id="rating" class="form-control">
+                        <option value="5">5/5</option>
+                        <option value="4">4/5</option>
+                        <option value="3">3/5</option>
+                        <option value="2">2/5</option>
+                        <option value="1">1/5</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="content" class="form-label">Twoja opinia</label>
+                    <textarea name="content" id="content" rows="4" class="form-control" placeholder="Napisz, co sądzisz o tych butach"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Dodaj opinię</button>
+            </form>
+        @else
+            <div class="alert alert-info">
+                Zaloguj się, aby dodać opinię.
+            </div>
+        @endauth
+
+        @forelse($shoe->reviews()->latest()->get() as $review)
+            <div class="border rounded p-3 mb-3 bg-white">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <strong>{{ $review->user->name }}</strong>
+                    <span>{{ $review->rating }}/5</span>
+                </div>
+
+                <p class="mb-1">{{ $review->content }}</p>
+                <small class="text-muted">{{ $review->created_at->format('d.m.Y H:i') }}</small>
+            </div>
+        @empty
+            <p>Ten produkt nie ma jeszcze opinii.</p>
+        @endforelse
+    </div>
+</div>
 @endsection

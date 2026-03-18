@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ShoeController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\ReviewController;
 
 Route::get('/', [ShoeController::class, 'index'])->name('shoes.index');
 Route::get('/shoes/{shoe}', [ShoeController::class, 'show'])->name('shoes.show');
@@ -23,6 +24,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/checkout', [CheckoutController::class, 'store'])->name('checkout.store');
     Route::get('/my-orders', [CheckoutController::class, 'myOrders'])->name('orders.my');
 });
+Route::middleware('auth')->post('shoes/{shoe}/reviews', [ReviewController::class, 'store'])->name('reviews.store');
 
 Route::prefix('admin')->name('admin.')->middleware(['auth', 'is_admin'])->group(function () {
     Route::get('/shoes', [ShoeController::class, 'adminIndex'])->name('shoes.index');
