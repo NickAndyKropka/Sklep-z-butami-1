@@ -61,7 +61,7 @@
                                     <div class="cena">{{ number_format($shoe->price, 2, '.', '') }} zł</div>
                                     <div class="product-meta">{{ $shoe->category }}</div>
                                     <div class="product-meta">{{ $shoe->type }}</div>
-
+                                    <div class="product-meta" style="display: none;">{{ $shoe->size }}</div>
                                     <div style="margin-top: 14px;">
                                         <span class="btn-main">Zobacz produkt</span>
                                     </div>

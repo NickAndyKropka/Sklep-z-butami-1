@@ -46,7 +46,6 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
-        return redirect()->route('shoes.index');
-
+        return redirect(route('dashboard', absolute: false));
     }
 }

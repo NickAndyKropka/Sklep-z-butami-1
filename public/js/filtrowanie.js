@@ -11,6 +11,22 @@ document.addEventListener("DOMContentLoaded", function () {
         var nowacena = new Array();
         const min = document.getElementById('min');
         const max = document.getElementById('max');
+        const logo = document.getElementById('logo');
+        const search = document.getElementById('search');
+
+        // Nasłuchiwanie na kliknięcie logo i kliknięcie poza polem wyszukiwania
+
+        logo.addEventListener('click', (e) => {
+            e.preventDefault();
+            search.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!search.contains(e.target) && !logo.contains(e.target)) {
+                search.classList.remove('active');
+            }
+        });
+
 
         // Nasłuchiwanie na wpisywanie tekstu w filtrze
 
@@ -77,5 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
         rodz.addEventListener('input', filtrowanie);
         min.addEventListener('input', pocenie);
         max.addEventListener('input', pocenie);
+
+
 
 });
