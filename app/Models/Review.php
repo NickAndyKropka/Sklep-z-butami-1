@@ -14,12 +14,13 @@ class Review extends Model
     ];
 
     public function shoe()
-    {
-        return $this->belongsTo(Shoe::class);
-    }
+{
+    return $this->belongsTo(Shoe::class);
+}
 
-    public function user()
-    {
-        return $this->belongsTo(User::class);
-    }
+public function user()
+{
+    return $this->belongsTo(User::class);
+}
+
 }

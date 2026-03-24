@@ -45,7 +45,14 @@ class ShoeController extends Controller
     {
         $shoe->load(['reviews.user']);
 
-        return view('shoes.show', compact('shoe'));
+        $recommendedShoes = Shoe::where('category', $shoe->category)
+            ->where('id', '!=', $shoe->id)
+            ->latest()
+            ->take(4)
+            ->get();
+
+        return view('shoes.show', compact('shoe', 'recommendedShoes'));
+
     }
 
     public function adminIndex()
