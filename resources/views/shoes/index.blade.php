@@ -3,15 +3,15 @@
 @section('content')
 
     <div class="szukaj">
-        <input
-            type="text"
-            class="szukaj_input"
-            id="filtr"
-            placeholder="Wyszukaj swoich wymarzonych butów"
-        >
+        <input type="text" class="search" id="filtr" placeholder="Wyszukaj swoich wymarzonych butów">
     </div>
 
-    <aside class="details">
+    <div class="filtr">
+        <img id="filtricon" src="{{ asset('storage/shoes/filtricon.png') }}" alt="filtricon">
+        <h1 id="filtrbtn">FILTR</h1>
+    </div>
+
+    <div id="filtrpanel" class="filtrpanel">
 
         <h3>Wybierz markę</h3>
         <select id="marka">
@@ -42,7 +42,7 @@
         <h3>Cena</h3>
         <input type="text" id="min" placeholder="Min cena">
         <input type="text" id="max" placeholder="Max cena">
-    </aside>
+    </div>
 
     <div class="widok">
         @if($shoes->count())
@@ -59,14 +59,13 @@
 
                                 <div class="product-body">
                                     <h4 class="nazwa">{{ $shoe->name }}</h4>
+                                    <hr>
                                     <div class="product-brand">{{ $shoe->brand }}</div>
                                     <div class="cena">{{ number_format($shoe->price, 2, '.', '') }} zł</div>
                                     <div class="product-meta">{{ $shoe->category }}</div>
                                     <div class="product-meta">{{ $shoe->type }}</div>
                                     <div class="product-meta" id="rozmiar" style="display: none;">{{ $shoe->size }}</div>
-                                    <div style="margin-top: 14px;">
-                                        <span class="btn-main">Zobacz produkt</span>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </a>
