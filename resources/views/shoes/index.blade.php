@@ -12,13 +12,14 @@
             <img src="{{ asset('storage/shoes/hero12.png') }}" alt="but">
         </div>
     </section>
+    <title>Sklep z butami</title>
     <div class="szukaj">
         <input type="text" class="search" id="filtr" placeholder="Wyszukaj swoich wymarzonych butów">
     </div>
 
-    <div class="filtr">
-        <img id="filtricon" src="{{ asset('storage/shoes/filtricon.png') }}" alt="filtricon">
-        <h1 id="filtrbtn">FILTR</h1>
+    <div class="filtr" id="filtrbtn">
+        <img src="{{ asset('storage/shoes/filtricon.png') }}" alt="filtricon">
+        <h1>FILTR</h1>
     </div>
 
     <div id="filtrpanel" class="filtrpanel">

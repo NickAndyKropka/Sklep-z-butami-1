@@ -1,4 +1,5 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () 
+{
         // Zmienne do przechowywania elementów DOM
 
         const filtr = document.getElementById('filtr');
@@ -11,23 +12,8 @@ document.addEventListener("DOMContentLoaded", function () {
         var nowacena = new Array();
         const min = document.getElementById('min');
         const max = document.getElementById('max');
-        const logo = document.getElementById('logo');
-        const search = document.getElementById('search');
+
         const rozmiar = document.getElementById('rozm');
-        
-
-        // Nasłuchiwanie na kliknięcie logo i kliknięcie poza polem wyszukiwania
-
-        // logo.addEventListener('click', (e) => {
-        //     e.preventDefault();
-        //     search.classList.toggle('active');
-        // });
-
-        // document.addEventListener('click', (e) => {
-        //     if (!search.contains(e.target) && !logo.contains(e.target)) {
-        //         search.classList.remove('active');
-        //     }
-        // });
 
         // Funkcja do filtrowania
 
@@ -73,14 +59,6 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
 
-        document.querySelectorAll('.star-rating:not(.readonly) label').forEach(star => {
-            star.addEventListener('click', function() {
-                this.style.transform = 'scale(1.2)';
-                setTimeout(() => {
-                    this.style.transform = 'scale(1)';
-                }, 200);
-            });
-        });
         //Wywoływanie funkcji filtrowania
 
         marka.addEventListener('input', filtrowanie);

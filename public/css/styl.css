@@ -223,14 +223,14 @@ main,
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     align-items: center;
     text-align: center;
     position: fixed;
     top: 10vh;
     left: -400px;
     width: 350px;
-    height: 90vh;
+    height: 100%;
     background-color: white;
     color: black;
     padding: 20px;
@@ -267,7 +267,7 @@ footer hr{
 .widok {
     text-align: center;
     padding: 40px 20px 0px 20px
-}
+} */
 .grid {
     margin: 20px 20px;
     list-style: none;

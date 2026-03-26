@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
+    <title>Koszyk</title>
     <h1 class="mb-4">Koszyk</h1>
 
     @if(session('success'))
