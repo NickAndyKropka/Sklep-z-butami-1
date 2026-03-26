@@ -36,7 +36,13 @@ body {
     align-items: center;
     gap: 15px;
 }
-.usericon, #searchlogo, .prawo a img{
+.prawo a img{
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    background-color: black;
+}
+.usericon, #searchlogo{
     height: 40px;
     width: 40px;
     cursor: pointer;
@@ -76,7 +82,6 @@ body {
 .koszyk, .user {
     width: 22px;
 }
-
 .hero {
     height: 50vh;
     min-height: 400px;
@@ -125,7 +130,6 @@ body {
 }
 .herobtn {
     background: black;
-    color: white;
     padding: 15px 30px;
     border-radius: 30px;
     font-size: 16px;
@@ -133,6 +137,10 @@ body {
     cursor: pointer;
     transition: 0.3s;
     font-family: "Roboto Condensed", sans-serif;
+}
+.herobtn a{
+    color: white;
+    text-decoration: none;
 }
 .search {
     position: fixed;
