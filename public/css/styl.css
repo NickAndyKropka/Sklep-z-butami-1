@@ -42,7 +42,7 @@ main,
     align-items: center;
     gap: 15px;
 }
-.usericon, #searchlogo, .prawo a img{
+.usericon, #searchlogo, .koszykimg, .prawo a img{
     height: 40px;
     width: 40px;
     cursor: pointer;
@@ -77,10 +77,6 @@ main,
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
-}
-
-.koszyk, .user {
-    width: 22px;
 }
 
 .hero {
@@ -311,7 +307,7 @@ footer hr{
   color: #fff;
   padding: 40px 20px;
   margin-top: 60px;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 100%;
 }
