@@ -23,7 +23,7 @@
         <a href="{{ route('shoes.index') }}" class="brand-logo">Sklep z butami</a>
         <div class="prawo">
             <img id="searchlogo" src="{{ asset('storage/shoes/lupa.png') }}" alt="searchlogo">
-            <a href="{{ route('cart.index') }}"><img class="koszyk" src="{{ asset('storage/shoes/basketicon.png') }}" alt="koszyk"></a>
+            <a href="{{ route('cart.index') }}" class="koszyk"><img class="koszykimg" src="{{ asset('storage/shoes/basketicon.png') }}" alt="koszyk"></a>
             <img class="usericon" src="{{ asset('storage/shoes/usericon.png') }}" alt="ikona użytkownika">
             <div class="usermenu" id="usermenu">
                 @auth
@@ -56,7 +56,7 @@
             @yield('content')
         </div>
     </main>
-    <!-- <footer class="footer">
+    <footer class="footer">
         <div class="footercontainer">
             <p class="footertitle">POMOC</p>
             <hr>
@@ -67,6 +67,6 @@
             </div>
             <p class="footertm">Buty.pl™. Wszelkie prawa zastrzeżone.</p>
         </div>
-    </footer> -->
+    </footer>
 </body>
 </html>
