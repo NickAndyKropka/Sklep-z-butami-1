@@ -17,7 +17,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 10vh;
+    height: 13vh;
     z-index: 1000;
 }
 
@@ -36,6 +36,8 @@ main,
     font-size: 45px;
     font-weight: 900;
     letter-spacing: 2px;
+    color: #fff;
+    z-index: 1;
 }
 .prawo {
     display: flex;
@@ -74,9 +76,10 @@ main,
 
 .usermenu.active {
     right: 0;
-    top: 78px;
+    top: 110px;
     transform: translateY(0);
     pointer-events: auto;
+    text-align: center;
 }
 
 .hero {
@@ -228,7 +231,6 @@ main,
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    /* justify-content: space-around; */
     align-items: center;
     text-align: center;
     position: fixed;
@@ -272,7 +274,7 @@ footer hr{
 .widok {
     text-align: center;
     padding: 40px 20px 0px 20px
-} */
+}
 .grid {
     margin: 20px 20px;
     list-style: none;
@@ -348,117 +350,185 @@ footer hr{
   font-size: 12px;
   color: #777;
 }
-@media (max-width: 768px) {
-    body {
-        min-width: 400px;
+@media (max-width: 1100px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
     }
-    .header {
-        padding: 10px;
-        text-align: center;
-        position: sticky;
-        top: 0;
-        min-height: 50px;
-    }
-    .logo img{
-        height: 45px;
-    }
-    .tytul {
-        font-size: 30px;
-    }
-    .prawo img,.prawo a {
-        height: 40px;
-    }
+}
+
+@media (max-width: 900px) {
+
     .hero {
-        display: none;
+        grid-template-columns: 1fr;
+        padding: 100px 20px 40px;
+        text-align: center;
     }
-    .filtr h1{
-        font-size: 25px;
+
+    .heroleft {
+        max-width: 100%;
+        text-align: center;
+        margin: 0 auto 20px;
     }
-    .filtr img{
-        height: 30px;
-        cursor: pointer;
+
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
     }
-    .filtrpanel {
-        flex-direction: row;
-        justify-content: space-around;
-        top: 0px;
-        height: 107px;
-        border-bottom: 3px solid black;
-        border-right: none;
-        font-size: 11px;
-        width: 100%;
-        left: -100%;
+
+    .heroimg {
+        justify-content: center;
+        order: -1;
     }
-    .filtrpanel div:first-child {
-        display: none;
+
+    .heroimg img {
+        max-width: 340px;
     }
-    .filtrpanel select{
-        width: 180px;
-    }
-    .filtrgrupa {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        min-width: 200px;
-        width: auto;
-        flex: 0 0 auto;
-    }
-    .filtrpanel hr{
-        display: none;
-    }
+
     .grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 50px;
+        gap: 24px;
     }
-    .card img {
-        width: 100%;
-        max-height: 80px;
-        object-fit: contain;
-        margin-bottom: 20px;
-    }
+
     .card h2 {
-        font-size: 20px;
+        font-size: 22px;
     }
+
     .card p {
         font-size: 16px;
     }
-    .search input {
-        width: 180px;
+
+    .card img {
+        height: 200px;
     }
 }
-@media (max-width: 480px) {
-    body {
-        min-width: 400px;
+
+@media (max-width: 768px) {
+
+    .header {
+        padding: 8px 16px;
+        height: 60px;
     }
-    .prawo img,.prawo a {
-        height: 32px;
+
+    main,
+    .page-wrap {
+        margin-top: 60px;
     }
-    .filtrpanel{
-        min-height: 180px;
-        font-size: 10px;
+
+    .logo img {
+        height: 40px;
     }
-    .filtrpanel h1{
-        margin-top: 10px;
+
+    .tytul {
+        font-size: 22px;
     }
+
+    .prawo img,
+    .prawo a img,
+    .usericon,
+    #searchlogo,
+    .koszykimg {
+        height: 30px;
+        width: 30px;
+    }
+
+    .usermenu,
+    .usermenu.active {
+        top: 60px;
+    }
+
+    .search {
+        top: 68px;
+        width: 90%;
+    }
+
+    .search input {
+        font-size: 14px;
+    }
+
+    .filtr {
+        width: calc(100% - 16px);
+        padding: 10px 14px;
+        margin: 16px auto 8px;
+        border-radius: 14px;
+        gap: 8px;
+        top: 60px;
+    }
+
+    .filtr h1 {
+        font-size: 18px;
+    }
+
+    .filtr img {
+        height: 30px;
+        width: 30px;
+        padding: 4px;
+    }
+
+    .filtrpanel {
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        height: auto;
+        max-height: calc(100vh - 60px);
+        border-right: none;
+        border-bottom: 2px solid #000;
+        flex-direction: column;
+    }
+
+    .filtrpanel.active {
+        left: 0;
+    }
+
+    .filtrgrupa {
+        align-items: stretch;
+    }
+
+    .filtrpanel select,
+    .filtrpanel input {
+        width: 100%;
+        font-size: 14px;
+        height: 40px;
+    }
+
     .grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 50px;
+        gap: 20px;
+        margin: 16px;
     }
+
+    .card img {
+        height: 180px;
+    }
+
+    .footertitle {
+        font-size: 18px;
+    }
+
+    .footerlink a {
+        display: block;
+        margin: 6px 0;
+        font-size: 14px;
+    }
+
+    .footertm {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 540px) {
+
+    .hero {
+        padding: 90px 16px 32px;
+    }
+
     .grid {
         grid-template-columns: 1fr;
+        gap: 22px;
+        margin: 16px;
     }
-    .hero {
-        display: none;
-    }
-    .heroleft button{
-        display: none;
-    }
-    .tytul {
-        font-size: 20px;
-    }
-    .usericon, #searchlogo, .prawo a img {
-        height: 32px;
-        width: 32px;
+
+    .card img {
+        height: 180px;
     }
 }
