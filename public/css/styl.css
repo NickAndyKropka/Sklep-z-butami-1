@@ -167,28 +167,27 @@ body {
     padding: 25px;
     font-weight: bold;
     margin-bottom: 20px;
+    cursor: pointer;
 }
 .filtr h1{
-    cursor: pointer;
     font-size: 46px;
     color: white;
 }
 .filtr img{
     height: 55px;
-    cursor: pointer;
 }
 .filtrpanel {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     align-items: center;
     text-align: center;
     position: fixed;
     top: 10vh;
     left: -400px;
     width: 350px;
-    height: 90vh;
+    height: 100%;
     background-color: white;
     color: black;
     padding: 20px;
@@ -222,10 +221,10 @@ footer hr{
     background-color: white;
     height: 3px;
 }
-.container {
+/* .container {
     text-align: center;
     padding: 40px 20px 0px 20px
-}
+} */
 .grid {
     margin: 20px 20px;
     list-style: none;
