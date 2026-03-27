@@ -20,9 +20,9 @@
         <div class="logo">
             <a href="{{ route('shoes.index') }}" class="brand-logo"><img src="{{ asset('storage/shoes/logo.png') }}" alt="Logo sklepu" class="img-fluid"></a>
         </div>
-        <a href="{{ route('shoes.index') }}" class="brand-logo">Sklep z butami</a>
+        <a href="{{ route('shoes.index') }}"><p class="tytul">Sklep z butami</p></a>
         <div class="prawo">
-            <img id="searchlogo" src="{{ asset('storage/shoes/lupa.png') }}" alt="searchlogo">
+            <img id="searchlogo" src="{{ asset('storage/shoes/lupa.png') }}" alt="searchlogo"  id="sekcja_z_butami">
             <img class="koszykimg" onclick="window.location.href='{{ route('cart.index') }}'" src="{{ asset('storage/shoes/basketicon.png') }}" alt="koszyk">
             <img class="usericon" src="{{ asset('storage/shoes/usericon.png') }}" alt="ikona użytkownika">
             <div class="usermenu" id="usermenu">
