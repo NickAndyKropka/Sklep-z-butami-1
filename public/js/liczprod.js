@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
+
+    // Pobierz elementy DOM
+
     const filtr = document.getElementById('filtr');
     const marka = document.getElementById('marka');
     const kat = document.getElementById('kat');

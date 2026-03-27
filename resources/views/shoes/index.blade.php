@@ -24,7 +24,7 @@
 
     <div id="filtrpanel" class="filtrpanel">
         <div>
-            <img src="img/logo.png" alt="logo strony">
+            <img src="{{ asset('storage/shoes/Sneaker.png') }}" alt="logo strony">
         </div>
         <hr>
         <div class="filtrgrupa">
@@ -70,6 +70,9 @@
             <h3>Cena</h3>
             <input type="text" id="min" placeholder="Min cena">
             <input type="text" id="max" placeholder="Max cena">
+        </div>
+        <div class="filtrgrupa">
+            <button id="reset" class="btn btn-secondary">Resetuj filtry</button>
         </div>
     </div>
     <div id="sekcja_z_butami"></div>
