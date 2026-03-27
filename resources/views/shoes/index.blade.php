@@ -25,7 +25,7 @@
 
     <div id="filtrpanel" class="filtrpanel">
         <div>
-            <img src="img/logo.png" alt="logo strony">
+            <img src="{{ asset('storage/shoes/Sneaker.png') }}" alt="logo strony">
         </div>
         <hr>
         <div class="filtrgrupa">

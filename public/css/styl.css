@@ -26,7 +26,8 @@ main,
     margin-top: 110px;
 }
 .logo img{
-    height: 83px;
+    height: 100px;
+    width: auto;
     box-sizing: border-box;
 }
 .logo{
@@ -61,17 +62,35 @@ main,
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     transform: translateY(-10px);
     transition: 0.3s;
+    text-align: center;
+    border: 2px solid rgb(59, 59, 59);
 }
 
-.usermenu a {
+.usermenu a:nth-child(1), .usermenu a:nth-child(2) {
     display: block;
     padding: 10px 15px;
     text-decoration: none;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+.usermenu a:nth-child(3) {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    background-color: #ffc107;
+    color: rgb(0, 0, 0);
+}
+
+.usermenu a:hover:nth-child(1), .usermenu a:hover:nth-child(2) {
+    cursor: pointer;
+    background-color: rgb(59, 59, 59);
     color: rgb(255, 255, 255);
 }
 
-.usermenu a:hover {
+.usermenu a:nth-child(3):hover {
     cursor: pointer;
+    background-color: #ffb300;
+    color: rgb(0, 0, 0);
 }
 
 .usermenu.active {

@@ -18,7 +18,7 @@
 <body>
     <header class="header">
         <div class="logo">
-            <a href="{{ route('shoes.index') }}" class="brand-logo"><img src="{{ asset('storage/shoes/logo.png') }}" alt="Logo sklepu" class="img-fluid"></a>
+            <a href="{{ route('shoes.index') }}" class="brand-logo"><img src="{{ asset('storage/shoes/Sneaker.png') }}" alt="Logo sklepu" class="img-fluid"></a>
         </div>
         <a href="{{ route('shoes.index') }}"><p class="tytul">Sklep z butami</p></a>
         <div class="prawo">
@@ -40,7 +40,7 @@
                     </form>
                 @else
                     <a class="btn btn-soft btn-sm" href="{{ route('login') }}">Logowanie</a>
-                    <a class="btn btn-dark btn-sm" href="{{ route('register') }}" style="background-color: white; color: black;">Rejestracja</a>
+                    <a class="btn btn-dark btn-sm" href="{{ route('register') }}">Rejestracja</a>
                 @endauth
             </div>
         </div>
